@@ -1,0 +1,41 @@
+
+ <div class="login-page"> 
+<div class="container">
+    <div class="card card-container">
+                <h1 class="header">Welcome to LoginEx</h1>
+    <div class="row">
+        <div class="col-md-12 col-md-offset-12">
+            <form [formGroup]="loginForm">
+                <div class="form-group">
+                    <label > Email :</label>
+                    <input type="email" formControlName="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password :</label>
+                    <input type="password" formControlNam="password" class="form-control">
+                    <label class="error">{{errorMessage}}</label>
+                </div>
+                <button type="submit" (click)="tryLogin(loginForm.value)" class="btn btn-success">Login</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-6">
+            <button type="button" class="btn btn-primary btn-block" (click)="tryFacebookLogin()"> Facebook</button>
+        </div>
+        <div class="col-md-6 col-md-offset-6">
+                <button type="button" class="btn btn-danger btn-block" (click)="tryGoogleLogin()"> Google</button>
+        </div>
+        <!-- <div class="col-md-4 col-md-offset-4">
+                <button type="button" class="btn btn-info btn-block" (click)="tryTwitterLogin()">Twitter</button>
+            </div> -->
+    </div>
+   
+    <div class="row">
+        <div class="col-md-12 col-md-offset-12">
+            <p>No account yet? <a href="/register">Create an account</a></p>
+        </div>
+    </div>
+    </div>
+</div>
+ </div> 
